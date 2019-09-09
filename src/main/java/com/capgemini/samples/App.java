@@ -18,7 +18,7 @@ public class App
             if(c%2 == 0)
                 System.out.println(" ORA ");
             else
-                System.out.println(" MUDA ");
+                System.out.println("MUDA");
 
     }
 }
