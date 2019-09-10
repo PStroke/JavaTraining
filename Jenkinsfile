@@ -8,9 +8,9 @@ pipeline {
                     }
         }
     }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
+    post {
+            always {
+                junit 'build/reports/**/*.xml'
+            }
         }
-    }
 }
