@@ -1,20 +1,26 @@
 package com.capgemini.samples;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+import org.mockito.Mockito;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
+public class AppTest
 {
-    /**
-     * Rigorous Test :-)
-     */
+    private Calculator addition = new Calculator();
+
     @Test
-    public void shouldAnswerWithTrue()
+    public void assertAddition()
     {
-        assertTrue( true );
+        addition = Mockito.mock(Calculator.class);
+        when(addition.Addition(Mockito.anyInt(), Mockito.anyInt())).thenReturn(4);
+
     }
+
+
+
+
+
 }
+
